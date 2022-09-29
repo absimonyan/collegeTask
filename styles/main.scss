@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import "./variables.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: $darkblue;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            padding: 15px 15px;
+            list-style: none;
+            height: 100%;
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 15px 15px;
+                transition: .3s;
+                @media screen and (max-width: $mobile) {
+                    padding: 15px 5px;
+                    font-size: 13px;
+                }
+                &:hover {
+                    background-color: $middleblue;
+                    cursor: pointer;
+                }
+            }
+        }
+        .active {
+            background-color: $middleblue;
+        }
+    }
+}
